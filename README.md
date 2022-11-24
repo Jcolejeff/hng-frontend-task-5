@@ -1,9 +1,8 @@
-# <div id="top">Aplicar - Cover Letter Generator</div>
+# <div id="top">InstaLoan - loan agreement Letter Generator</div>
 
 ### Table of Content
 
 - [Installation](#getting_started)
-- [Set up server](#server)
 - [How to contribute](#contribute)
 
 <!-- <div>
@@ -64,7 +63,7 @@ Before installation, please make sure you have already installed the following t
 1. Clone the project, you can use the following command:
 
    ```bash
-   git clone https://github.com/<your-github-username>/hng-frontend-task-5
+   git clone https://github.com/<your-github-username>/hng-frontend-task-5.git
    ```
 
 2. Install dependencies with `npm install`
@@ -98,7 +97,7 @@ Before installation, please make sure you have already installed the following t
 3. Start the development server
 
    ```bash
-       npm run dev
+       npm start
    ```
 
 ## <p id="contribute">Contributing</p>
