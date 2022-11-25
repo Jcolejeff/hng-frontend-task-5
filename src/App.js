@@ -1,5 +1,6 @@
-import { ErrorPage, Home, UserDetails } from "./pages";
+import { ErrorPage, LoanPreview,  Home, UserDetails } from "./pages";
 import { ScrollToTop, Navbar, Sidebar } from "./components";
+import { Header, Footer } from "./layouts";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const App = () => {
 	return (
@@ -12,6 +13,9 @@ const App = () => {
 					<Route path="/" element={<Home />} />
 					<Route path="userDetails" element={<UserDetails />} />
 					<Route path="*" element={<ErrorPage />}></Route>
+					<Route path="/Preview" element={<LoanPreview/>}></Route>
+
+
 				</Routes>
 
 				{/* place footer here */}
