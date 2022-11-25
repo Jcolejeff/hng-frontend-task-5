@@ -85,7 +85,6 @@ const Wrapper = styled.section`
 
 	@media (min-width: 40rem) {
 		.input {
-			text-align: center;
 			h3 {
 				margin-block-end: 3rem;
 				font-size: 1.4rem;
@@ -108,9 +107,10 @@ const Wrapper = styled.section`
 			color: #434343;
 
 			h1 {
-				font-size: 3.5rem;
+				font-size: 3rem;
 				color: #434343;
 				font-weight: 600;
+				margin-inline-start: 2.3rem;
 			}
 			p {
 				font-weight: 400;

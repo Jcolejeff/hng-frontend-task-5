@@ -2,10 +2,12 @@ import { useState } from "react";
 import CustomInput from "./Input";
 import { useGlobalContext } from "../context/context";
 import { useNavigate } from "react-router-dom";
-
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 const BasicForm = () => {
 	const { setUserInfo } = useGlobalContext();
 	const Navigate = useNavigate();
+	const notify = () => toast("Please fill in all values!");
 	const [values, setValues] = useState({
 		lenderName: "",
 		amount: "",
@@ -17,20 +19,33 @@ const BasicForm = () => {
 	const handleChange = (e) => {
 		setValues({ ...values, [e.target.name]: e.target.value });
 	};
-
+	const { receiverName, lenderName, amount, startDate, duration, amountBack } =
+		values;
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(values);
 		setUserInfo(values);
-		Navigate("/");
+
+		if (
+			receiverName === "" ||
+			lenderName === "" ||
+			amount === "" ||
+			startDate === "" ||
+			duration === "" ||
+			amountBack === ""
+		) {
+			notify();
+			return;
+		}
+
+		Navigate("/Preview");
 	};
 
-	const { receiverName, lenderName, amount, startDate, duration, amountBack } =
-		values;
 	return (
 		<form onSubmit={handleSubmit} autoComplete="off">
 			<div>
 				<h2>Fill in the correct details</h2>
+				<ToastContainer />
 			</div>
 			<section className="names">
 				<CustomInput
@@ -96,7 +111,7 @@ const BasicForm = () => {
 			{/* <label htmlFor="checkbox">hello</label> */}
 
 			<button type="submit" id="btn__submit">
-				Send message
+				Generate
 			</button>
 		</form>
 	);
