@@ -1,18 +1,17 @@
 import { useFormik } from "formik";
 import { basicSchema } from "../schemas";
 import { useGlobalContext } from "../context/context";
+import CustomInput from "./Input";
 
 const BasicForm = () => {
 	const { userInfo, setUserInfo } = useGlobalContext();
 	const onSubmit = async (values, actions) => {
 		console.log(values);
 		console.log(actions);
-		setUserInfo({ ...values });
 
 		await new Promise((resolve) => setTimeout(resolve, 1000));
 		actions.resetForm();
 	};
-	console.log("info", userInfo);
 	const {
 		values,
 		errors,
@@ -28,6 +27,9 @@ const BasicForm = () => {
 			last_name: "",
 			message: "",
 			acceptedTos: "",
+			loan_receiver: "",
+			lender_address: "",
+			loan_receiver_address: "",
 		},
 		validationSchema: basicSchema,
 		onSubmit,
@@ -38,42 +40,55 @@ const BasicForm = () => {
 			<div>
 				<h1>Fill in the correct details</h1>
 			</div>
-			<section className="names">
-				<div>
-					<label htmlFor="lender_name">First name</label>
-					<input
-						id="lender_name"
-						type="text"
-						placeholder="Enter lender's name"
-						value={values.lender_name}
-						onChange={handleChange}
-						onBlur={handleBlur}
-						className={
-							errors.lender_name && touched.lender_name ? "input-error" : ""
-						}
-					/>
-					{errors.lender_name && touched.lender_name && (
-						<p className="error">{errors.lender_name}</p>
-					)}
-				</div>
-				<div>
-					<label htmlFor="last_name">Last name</label>
-					<input
-						id="last_name"
-						type="text"
-						placeholder="Enter your Last name"
-						value={values.last_name}
-						onChange={handleChange}
-						onBlur={handleBlur}
-						className={
-							errors.last_name && touched.last_name ? "input-error" : ""
-						}
-					/>
-					{errors.last_name && touched.last_name && (
-						<p className="error">{errors.last_name}</p>
-					)}
-				</div>
+			{/* <section className="names">
+				<CustomInput
+					id="lender_name"
+					type="text"
+					placeholder="Enter lender's name"
+					values={values}
+					handleBlur={handleBlur}
+					handleChange={handleChange}
+					errors={errors}
+					touched={touched}
+					label="Lender's name"
+				/>
+				<CustomInput
+					id="lender_address"
+					type="text"
+					placeholder="Enter lender's address"
+					values={values}
+					handleBlur={handleBlur}
+					handleChange={handleChange}
+					errors={errors}
+					touched={touched}
+					label="Lender's address"
+				/>
 			</section>
+
+			<section className="names">
+				<CustomInput
+					id="loan_receiver"
+					type="text"
+					placeholder="Enter receiver's name"
+					values={values}
+					handleBlur={handleBlur}
+					handleChange={handleChange}
+					errors={errors}
+					touched={touched}
+					label="Loan receiver"
+				/>
+				<CustomInput
+					id="loan_receiver_address"
+					type="text"
+					placeholder="Enter receiver's address"
+					values={values}
+					handleBlur={handleBlur}
+					handleChange={handleChange}
+					errors={errors}
+					touched={touched}
+					label="Loan receiver's address"
+				/>
+			</section> */}
 
 			<label htmlFor="email">Email</label>
 			<input
@@ -104,7 +119,12 @@ const BasicForm = () => {
 
 			{/* <label htmlFor="checkbox">hello</label> */}
 
-			<button disabled={isSubmitting} type="submit" id="btn__submit">
+			<button
+				disabled={isSubmitting}
+				onClick={handleSubmit}
+				type="submit"
+				id="btn__submit"
+			>
 				Send message
 			</button>
 		</form>

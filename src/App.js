@@ -1,6 +1,5 @@
 import { ErrorPage, Home, UserDetails } from "./pages";
-import { ScrollToTop, Navbar, Sidebar, Footer } from "./components";
-import { Header } from "./layouts";
+import { ScrollToTop, Navbar, Sidebar } from "./components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const App = () => {
 	return (

@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { BasicForm, Footer } from "../components";
 const UserDetails = () => {
 	return (
-		<>
+		<div>
 			<Wrapper>
 				<BasicForm />
+				<Footer />
 			</Wrapper>
-			<Footer />
-		</>
+		</div>
 	);
 };
 
