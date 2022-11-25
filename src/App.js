@@ -1,4 +1,4 @@
-import { ErrorPage } from "./pages";
+import { ErrorPage, LoanPreview } from "./pages";
 import { ScrollToTop } from "./components";
 import { Header, Footer } from "./layouts";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -12,6 +12,9 @@ const App = () => {
 					<Route path="/" element={<div> hello</div>} />
 					<Route path="template/:id" element={<div>world</div>} />
 					<Route path="*" element={<ErrorPage />}></Route>
+					<Route path="/Preview" element={<LoanPreview/>}></Route>
+
+
 				</Routes>
 				<Footer />
 				{/* place footer here */}
