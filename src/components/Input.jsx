@@ -1,15 +1,11 @@
-import React from "react";
-
 const CustomInput = ({
 	id,
 	type,
 	placeholder,
 	values,
-	handleBlur,
-	handleChange,
-	errors,
-	touched,
+	name,
 	label,
+	handleChange,
 }) => {
 	return (
 		<div>
@@ -19,12 +15,10 @@ const CustomInput = ({
 				id={id}
 				type={type}
 				placeholder={placeholder}
-				value={values[id]}
+				value={values}
+				name={name}
 				onChange={handleChange}
-				onBlur={handleBlur}
-				className={errors[id] && touched[id] ? "input-error" : ""}
 			/>
-			{errors[id] && touched[id] && <p className="error">{errors[id]}</p>}
 		</div>
 	);
 };

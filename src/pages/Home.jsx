@@ -6,7 +6,7 @@ const Home = () => {
 	console.log(isModalOpen);
 	return (
 		<main>
-			<Header />
+			<Header />S
 			<Services />
 			<CallToAction />
 			<Footer />
