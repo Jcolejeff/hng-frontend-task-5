@@ -1,15 +1,16 @@
-import { ErrorPage } from "./pages";
-import { ScrollToTop } from "./components";
-import { Header, Footer } from "./layouts";
+import { ErrorPage, Home } from "./pages";
+import { ScrollToTop, Navbar, Sidebar, Footer } from "./components";
+import { Header } from "./layouts";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const App = () => {
 	return (
 		<Router>
 			<ScrollToTop>
 				{/* place nav bar here*/}
-				<Header />
+				<Navbar />
+				<Sidebar />
 				<Routes>
-					<Route path="/" element={<div> hello</div>} />
+					<Route path="/" element={<Home />} />
 					<Route path="template/:id" element={<div>world</div>} />
 					<Route path="*" element={<ErrorPage />}></Route>
 				</Routes>
