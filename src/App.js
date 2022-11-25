@@ -1,5 +1,5 @@
-import { ErrorPage, LoanPreview } from "./pages";
-import { ScrollToTop } from "./components";
+import { ErrorPage, LoanPreview,  Home, UserDetails } from "./pages";
+import { ScrollToTop, Navbar, Sidebar } from "./components";
 import { Header, Footer } from "./layouts";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const App = () => {

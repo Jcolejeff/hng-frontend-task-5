@@ -147,3 +147,183 @@
         margin-left: 15%;
     }
 }
+@media screen and (min-width: 30em){
+    .main{
+        margin-left: 5px;
+        margin-top: 5%;
+    }
+    .agreement2{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-right: 2px;
+        margin-left: 2px;
+    }
+
+    .potrait{
+        margin-left: 15%;
+        margin-bottom: 20px;
+    
+    }
+    
+    .potrait2{
+        margin-right: 5%;
+        margin-left: 15%;
+        margin-bottom: 20px;
+    }
+
+    .o{
+        margin-left: 8%;
+    }
+
+    .d{
+        font-size: 30px;
+    }
+    .a{
+        width: 300px !important;
+        margin-left: 10% !important;
+    }
+    .download{
+        width: 300px !important;
+        margin-left: 10%;
+    }
+    .s{
+        margin-left: 15%;
+    }
+}
+@media screen and (min-width: 40em){
+    .main{
+        margin-left: 175px;
+        margin-top: 5%;
+    }
+    
+    .agreement2{
+        border: solid;
+        border-width: 1px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+        margin-right: 25px;
+        margin-left: 25px;
+    
+    }
+
+    .potrait{
+        margin-left: 5%;
+        margin-bottom: 20px;
+    
+    }
+    
+    .potrait2{
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-bottom: 20px;
+    }
+
+    .o{
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        margin-top: 10%;
+        margin-bottom: 4%;
+        margin-left: 20%;
+    }
+
+    .d{
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    .a{
+    width: 450px !important;
+    margin-right: 5% !important;
+    margin-left: 5%!important;
+    padding:5%;
+    border-radius: 3%;
+    margin-bottom: 30% !important;
+    }
+    .download{
+        width: 450px !important;
+        margin-left: 5%;
+          
+    }
+    .s{
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        padding-top: 10%;
+        padding-bottom: 4%;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (min-width: 62em){
+    .main{
+        margin-left: 175px;
+        margin-top: 5%;
+    }
+    
+    .agreement2{
+        border: solid;
+        border-width: 1px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+        margin-right: 25px;
+        margin-left: 25px;
+    
+    }
+
+    .potrait{
+        margin-left: 5%;
+        margin-bottom: 20px;
+    
+    }
+    
+    .potrait2{
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-bottom: 20px;
+    }
+
+    .o{
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        margin-top: 10%;
+        margin-bottom: 4%;
+        margin-left: 20%;
+    }
+
+    .d{
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    .a{
+    width: 450px !important;
+    margin-right: 5% !important;
+    margin-left: 5%!important;
+    padding:5%;
+    border-radius: 3%;
+    margin-bottom: 30% !important;
+    }
+    .download{
+        width: 450px !important;
+        margin-left: 5%;
+          
+    }
+    .s{
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        padding-top: 10%;
+        padding-bottom: 4%;
+        margin-left: 5%;
+    }
+}
