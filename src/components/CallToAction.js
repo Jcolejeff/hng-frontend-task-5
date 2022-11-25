@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import callToactionImg from "../images/CallactionDesktop.png";
+import callToactionImg from "../Assets/callToActionImage.png";
 const CallToAction = () => {
 	return (
 		<Wrapper>
 			<section className="text">
-				<h1>Metabnb NFTs</h1>
+				<h1>Are you a First Timer?</h1>
 				<p>
-					Discover our NFT gift cards collection. Loyal customers gets amazing
-					gift cards which are traded as NFTs. These NFTs gives our cutomer
-					access to loads of our exclusive services.
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos
+					nesciunt necessitatibus laboriosam recusandae velit fugiat culpa amet
+					ullam aliquid quasi, at quia quo rem ipsa quod quisquam? Voluptates,
+					velit a!
 				</p>
 				<button>Learn More</button>
 			</section>
@@ -26,12 +27,16 @@ const CallToAction = () => {
 
 export default CallToAction;
 const Wrapper = styled.article`
-	background: var(--clr-primary);
-	color: var(--clr-white);
+	color: black;
 	display: flex;
 	flex-direction: column-reverse;
 	justify-content: center;
 	padding-block: 3rem;
+	align-items: center;
+	border: 1px solid #d7d7d7;
+	width: 85%;
+	margin-inline: auto;
+	padding-inline: 2rem;
 
 	.text {
 		text-align: center;
@@ -40,17 +45,20 @@ const Wrapper = styled.article`
 			margin-block: 2rem;
 		}
 		button {
-			color: #a02279;
+			color: white;
 			border: none;
 			padding: 1rem;
 			border-radius: 10px;
+			background-color: var(--clr-primary-0);
+		}
+		h1 {
+			color: var(--clr-primary-0);
 		}
 	}
 
 	.images {
 		width: 17rem;
 		position: relative;
-		margin-inline-start: 2.7rem;
 	}
 	.image {
 		width: 100%;
@@ -63,35 +71,34 @@ const Wrapper = styled.article`
 		min-height: 30vh;
 		padding: 2rem;
 		place-items: center;
+
 		.images {
 			width: 20rem;
-			margin-inline-end: 2rem;
 		}
 	}
 	@media (min-width: 1010px) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		min-height: 90vh;
+		border: none;
 
 		.images {
 			width: 40rem;
 			position: relative;
 			justify-self: center;
-			margin-inline-end: 5rem;
 		}
 		.text {
 			text-align: start;
 			align-self: center;
-			padding: 6rem;
+			padding: 2rem;
 			p {
 				line-height: 2;
 				margin-block: 2rem;
 				padding-inline-end: 1rem;
 			}
 			button {
-				color: #a02279;
 				border: none;
-				padding: 1rem;
+				padding-inline: 2rem;
 				border-radius: 10px;
 			}
 		}

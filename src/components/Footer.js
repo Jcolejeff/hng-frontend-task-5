@@ -58,7 +58,7 @@ const Wrapper = styled.footer`
 	background-color: black;
 	color: white;
 	padding-block-start: 2rem;
-
+	margin-block-start: 2rem;
 	display: flex;
 	flex-direction: column;
 	padding-inline-start: 1rem;

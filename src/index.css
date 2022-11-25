@@ -58,4 +58,5 @@ html {
 body {
 	margin: 0;
 	font-family: "Manrope", cursive;
+	background-color: var(--clr-grey-10);
 }

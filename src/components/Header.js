@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import heroImage from "../Assets/hero-img.jpg";
+import heroImg from "../Assets/hero-img-mobile.jpg";
 
 import { Link } from "react-router-dom";
 const Header = () => {
@@ -33,7 +34,8 @@ const Wrapper = styled.section`
 	margin-inline: auto;
 	align-items: center;
 	min-height: 100vh;
-	background: url(${heroImage}) center/cover no-repeat;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url(${heroImg}) center/cover no-repeat;
 	.start-btn {
 		text-decoration: none;
 		color: white;
@@ -46,14 +48,18 @@ const Wrapper = styled.section`
 	}
 
 	.text {
-		padding: 6rem;
-		text-align: start;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
 
 		h1 {
 			font-style: normal;
 			font-weight: 400;
-			font-size: 1.7rem;
-			color: #434343;
+			font-size: 2.1rem;
+			color: white;
 			margin: 0;
 		}
 		p {
@@ -66,9 +72,20 @@ const Wrapper = styled.section`
 		color: var(--clr-primary-0);
 		font-weight: 600;
 	}
+	.input {
+		text-align: center;
+		h3 {
+			margin-block-end: 1.5rem;
+			font-size: 1.3rem;
+		}
+		p {
+			margin-block-start: 1.5rem;
+		}
+	}
 
 	@media (min-width: 40rem) {
 		.input {
+			text-align: center;
 			h3 {
 				margin-block-end: 3rem;
 				font-size: 1.5rem;
@@ -80,13 +97,19 @@ const Wrapper = styled.section`
 	}
 
 	@media (min-width: 1010px) {
+		background: url(${heroImage}) center/cover no-repeat;
 		grid-template-columns: 1fr 1fr;
 
 		.text {
+			padding: 6rem;
+			text-align: start;
+			color: #434343;
+
 			h1 {
 				font-size: 4rem;
 				color: #434343;
 				font-weight: 600;
+				margin-inline-start: 1rem;
 			}
 			p {
 				font-weight: 400;
