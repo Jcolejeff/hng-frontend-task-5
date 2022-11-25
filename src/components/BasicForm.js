@@ -1,6 +1,4 @@
-import { useFormik } from "formik";
 import { useState } from "react";
-import { basicSchema } from "../schemas";
 import CustomInput from "./Input";
 
 const BasicForm = () => {
