@@ -1,15 +1,19 @@
 import { useFormik } from "formik";
 import { useState } from "react";
-import { basicSchema } from "../schemas";
 import CustomInput from "./Input";
+import { useGlobalContext } from "../context/context";
+import { useNavigate } from "react-router-dom";
 
 const BasicForm = () => {
+	const { setUserInfo } = useGlobalContext();
+	const Navigate = useNavigate();
 	const [values, setValues] = useState({
-		firstName: "",
-		lastName: "",
-		email: "",
-		message: "",
+		lenderName: "",
+		amount: "",
+		startDate: "",
+		duration: "",
 		receiverName: "",
+		amountBack: "",
 	});
 	const handleChange = (e) => {
 		setValues({ ...values, [e.target.name]: e.target.value });
@@ -18,24 +22,26 @@ const BasicForm = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(values);
+		setUserInfo(values);
+		Navigate("/");
 	};
 
-	const { receiverName } = values;
+	const { receiverName, lenderName, amount, startDate, duration, amountBack } =
+		values;
 	return (
 		<form onSubmit={handleSubmit} autoComplete="off">
 			<div>
-				<h1>Contact Me</h1>
-				<p>Hi there,contact me to ask me about anything you have in mind.</p>
+				<h2>Fill in the correct details</h2>
 			</div>
 			<section className="names">
 				<CustomInput
-					id="receiverName"
+					id="lenderName"
 					type="text"
-					placeholder="Enter receiver's name"
-					values={receiverName}
+					placeholder="Enter lender's name"
+					values={lenderName}
 					handleChange={handleChange}
-					name="receiverName"
-					label="Receiver's Name"
+					name="lenderName"
+					label="Lender's Name"
 				/>
 				<CustomInput
 					id="receiverName"
@@ -49,62 +55,42 @@ const BasicForm = () => {
 			</section>
 			<section className="names">
 				<CustomInput
-					id="receiverName"
+					id="amount"
 					type="text"
-					placeholder="Enter receiver's name"
-					values={receiverName}
+					placeholder="Enter amount"
+					values={amount}
 					handleChange={handleChange}
-					name="receiverName"
-					label="Receiver's Name"
+					name="amount"
+					label="Amount"
 				/>
 				<CustomInput
-					id="receiverName"
+					id="startDate"
 					type="text"
-					placeholder="Enter receiver's name"
-					values={receiverName}
+					placeholder="Enter Start Date"
+					values={startDate}
 					handleChange={handleChange}
-					name="receiverName"
-					label="Receiver's Name"
-				/>
-			</section>
-			<section className="names">
-				<CustomInput
-					id="receiverName"
-					type="text"
-					placeholder="Enter receiver's name"
-					values={receiverName}
-					handleChange={handleChange}
-					name="receiverName"
-					label="Receiver's Name"
-				/>
-				<CustomInput
-					id="receiverName"
-					type="text"
-					placeholder="Enter receiver's name"
-					values={receiverName}
-					handleChange={handleChange}
-					name="receiverName"
-					label="Receiver's Name"
+					name="startDate"
+					label="Start Date"
 				/>
 			</section>
 			<section className="names">
 				<CustomInput
-					id="receiverName"
+					id="duration"
 					type="text"
-					placeholder="Enter receiver's name"
-					values={receiverName}
+					placeholder="loan duration"
+					values={duration}
 					handleChange={handleChange}
-					name="receiverName"
-					label="Receiver's Name"
+					name="duration"
+					label="Loan duration"
 				/>
 				<CustomInput
-					id="receiverName"
+					id="amountBack"
 					type="text"
-					placeholder="Enter receiver's name"
-					values={receiverName}
+					placeholder="Enter amount to be paid back"
+					values={amountBack}
 					handleChange={handleChange}
-					name="receiverName"
-					label="Receiver's Name"
+					name="amountBack"
+					label="Amount to be paid Back"
 				/>
 			</section>
 
