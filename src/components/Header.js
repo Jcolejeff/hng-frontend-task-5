@@ -16,7 +16,7 @@ const Header = () => {
 
 				<div className="input">
 					<h3>get your loan agreement in 10 minutes</h3>
-					<Link to="/" className="start-btn">
+					<Link to="/userDetails" className="start-btn">
 						Get Started
 					</Link>
 					<p> over 200,000 users have generated loan agreement</p>
@@ -88,7 +88,7 @@ const Wrapper = styled.section`
 			text-align: center;
 			h3 {
 				margin-block-end: 3rem;
-				font-size: 1.5rem;
+				font-size: 1.4rem;
 			}
 			p {
 				margin-block-start: 1.5rem;
@@ -99,17 +99,18 @@ const Wrapper = styled.section`
 	@media (min-width: 1010px) {
 		background: url(${heroImage}) center/cover no-repeat;
 		grid-template-columns: 1fr 1fr;
-
+		.input {
+			text-align: start;
+		}
 		.text {
 			padding: 6rem;
 			text-align: start;
 			color: #434343;
 
 			h1 {
-				font-size: 4rem;
+				font-size: 3.5rem;
 				color: #434343;
 				font-weight: 600;
-				margin-inline-start: 1rem;
 			}
 			p {
 				font-weight: 400;

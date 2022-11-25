@@ -14,7 +14,7 @@ const Nav = () => {
 		<NavContainer>
 			<div className="nav-center">
 				<div className="nav-header">
-					<Link to="/">
+					<Link to="/" className="logo">
 						<img src={logo} />
 					</Link>
 					<button onClick={openSidebar} type="button" className="nav-toggle">
@@ -33,7 +33,7 @@ const Nav = () => {
 							);
 						})}
 					</ul>
-					<Link to="/" className="start-btn">
+					<Link to="/userDetails" className="start-btn">
 						Get Started
 					</Link>
 				</div>
@@ -59,7 +59,7 @@ const NavContainer = styled.nav`
 		align-items: center;
 		justify-content: space-between;
 		img {
-			width: 175px;
+			width: 115px;
 			margin-left: -15px;
 		}
 	}
@@ -69,11 +69,13 @@ const NavContainer = styled.nav`
 		color: var(--clr-primary-5);
 		cursor: pointer;
 		svg {
-			font-size: 2rem;
+			font-size: 1.4rem;
 		}
 	}
 	.nav-links {
 		display: none;
+	}
+	.logo {
 	}
 
 	.container {
@@ -83,6 +85,12 @@ const NavContainer = styled.nav`
 	}
 
 	@media (min-width: 992px) {
+		.nav-header {
+			img {
+				width: 175px;
+				margin-left: -15px;
+			}
+		}
 		.nav-toggle {
 			display: none;
 		}

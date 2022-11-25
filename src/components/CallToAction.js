@@ -83,7 +83,8 @@ const Wrapper = styled.article`
 		border: none;
 
 		.images {
-			width: 40rem;
+			width: 30rem;
+
 			position: relative;
 			justify-self: center;
 		}

@@ -5,4 +5,14 @@ import Navbar from "./Navbar";
 import Header from "./Header";
 import CallToAction from "./CallToAction";
 import Services from "./Services";
-export { ScrollToTop, Footer, Sidebar, Navbar, Header, CallToAction, Services };
+import BasicForm from "./BasicForm";
+export {
+	ScrollToTop,
+	Footer,
+	Sidebar,
+	Navbar,
+	Header,
+	CallToAction,
+	Services,
+	BasicForm,
+};

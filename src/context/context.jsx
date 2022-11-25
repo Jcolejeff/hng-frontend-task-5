@@ -5,6 +5,7 @@ const AppContext = createContext();
 const AppProvider = ({ children }) => {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [userInfo, setUserInfo] = useState({});
 
 	const openSidebar = () => {
 		setIsSidebarOpen(true);
@@ -29,7 +30,9 @@ const AppProvider = ({ children }) => {
 				closeModal,
 				openSidebar,
 				closeSidebar,
-				setIsModalOpen
+				setIsModalOpen,
+				userInfo,
+				setUserInfo,
 			}}
 		>
 			{children}

@@ -62,18 +62,21 @@ const SidebarContainer = styled.div`
 	}
 	.logo {
 		justify-self: center;
-		height: 80px;
+		height: 30px;
 	}
-
+	.links {
+		list-style-type: none;
+	}
 	.links a {
 		display: block;
 		text-align: center;
-		font-size: 1.5rem;
+		font-size: 1rem;
 		text-transform: capitalize;
 		padding: 1rem 1.5rem;
 		color: var(--clr-grey-3);
 		transition: var(--transition);
 		letter-spacing: var(--spacing);
+		text-decoration: none;
 	}
 
 	.links a:hover {
@@ -95,15 +98,14 @@ const SidebarContainer = styled.div`
 		z-index: -1;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		gap: 10rem;
+		padding-block-start: 2.5rem;
 	}
 	.show-sidebar {
 		transform: translate(0);
 		z-index: 999;
 	}
-	.cart-btn-wrapper {
-		margin: 2rem auto;
-	}
+
 	@media screen and (min-width: 992px) {
 		.sidebar {
 			display: none;

@@ -33,7 +33,7 @@ const Wrapper = styled.article`
 	@media (min-width: 40rem) {
 	}
 	@media (min-width: 1100px) {
-		height: 60vh;
+		height: 50vh;
 	}
 `;
 export default ServiceItem;

@@ -1,5 +1,5 @@
 import { useGlobalContext } from "../context/context";
-import { Header, CallToAction, Services } from "../components";
+import { Header, CallToAction, Services, Footer } from "../components";
 
 const Home = () => {
 	const { isModalOpen } = useGlobalContext();
@@ -9,6 +9,7 @@ const Home = () => {
 			<Header />
 			<Services />
 			<CallToAction />
+			<Footer />
 		</main>
 	);
 };

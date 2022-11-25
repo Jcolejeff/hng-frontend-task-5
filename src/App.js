@@ -1,4 +1,4 @@
-import { ErrorPage, Home } from "./pages";
+import { ErrorPage, Home, UserDetails } from "./pages";
 import { ScrollToTop, Navbar, Sidebar, Footer } from "./components";
 import { Header } from "./layouts";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -11,10 +11,10 @@ const App = () => {
 				<Sidebar />
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="template/:id" element={<div>world</div>} />
+					<Route path="userDetails" element={<UserDetails />} />
 					<Route path="*" element={<ErrorPage />}></Route>
 				</Routes>
-				<Footer />
+
 				{/* place footer here */}
 			</ScrollToTop>
 		</Router>
