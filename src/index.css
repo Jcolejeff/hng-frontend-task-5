@@ -6,6 +6,7 @@
 	--clr-primary-2: hsl(205, 77%, 27%);
 	--clr-primary-3: hsl(205, 72%, 37%);
 	--clr-primary-4: hsl(205, 63%, 48%);
+	--clr-primary-0: #123fde;
 	/* primary/main color */
 	--clr-primary-5: hsl(205, 78%, 60%);
 	/* lighter shades of primary color */
@@ -57,4 +58,5 @@ html {
 body {
 	margin: 0;
 	font-family: "Manrope", cursive;
+	background-color: var(--clr-grey-10);
 }

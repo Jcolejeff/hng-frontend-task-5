@@ -7,16 +7,17 @@ const App = () => {
 		<Router>
 			<ScrollToTop>
 				{/* place nav bar here*/}
-				<Header />
+				<Navbar />
+				<Sidebar />
 				<Routes>
-					<Route path="/" element={<div> hello</div>} />
-					<Route path="template/:id" element={<div>world</div>} />
+					<Route path="/" element={<Home />} />
+					<Route path="userDetails" element={<UserDetails />} />
 					<Route path="*" element={<ErrorPage />}></Route>
 					<Route path="/Preview" element={<LoanPreview/>}></Route>
 
 
 				</Routes>
-				<Footer />
+
 				{/* place footer here */}
 			</ScrollToTop>
 		</Router>
